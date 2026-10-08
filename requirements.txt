@@ -1,6 +1,3 @@
-streamlit
-requests
-google-generativeai
-pymongo
-google-api-python-client
-PyPDF2
+anthropic>=1.12.0,<2.0.0
+pypdf>=6.19.0,<7.0.0
+streamlit>=1.65.0,<2.0.0
