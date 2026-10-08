@@ -11,7 +11,7 @@ This repository contains an early evaluation build of that workflow. It is not a
 - Produces a case brief with confirmed context, items to confirm, a suggested next step, and an editable follow-up draft.
 - Keeps the case reference local to the Streamlit session and does not include it in the Claude request.
 - Lets the counselor edit the result and download it as a text file. The app never sends a message to a learner.
-- Offers Claude Sonnet 5.5 by default and Claude Haiku 4.5 as the lower-cost option.
+- Offers Claude Sonnet 5 by default and Claude Haiku 4.5 as the lower-cost option.
 
 Claude can make mistakes. The prompt tells it to use only supplied facts, separate missing details, and avoid making eligibility or admissions decisions. A counselor must verify every fact and decide what to use.
 

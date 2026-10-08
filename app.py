@@ -10,8 +10,8 @@ from anthropic import APIConnectionError, APIStatusError, Anthropic, RateLimitEr
 
 
 MODEL_OPTIONS = {
-    "Claude Sonnet 5.5 · balanced": "claude-sonnet-5-5",
-    "Claude Haiku 4.5 · lower cost": "claude-haiku-4-5",
+    "Claude Sonnet 5 · balanced": "claude-sonnet-5",
+    "Claude Haiku 4.5 · lower cost": "claude-haiku-4-5-20251001",
 }
 
 SYSTEM_PROMPT = """You are Baatwise, a drafting assistant for education and admissions counselors.
