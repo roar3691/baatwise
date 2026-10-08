@@ -1,6 +1,19 @@
 # Baatwise
 
-Baatwise is an early conversational AI prototype. It uses Claude for replies and selects a small set of earlier turns that are relevant to the current question, alongside the most recent turns. This is a lightweight lexical retrieval method; it is not a trained attention model, and it does not claim persistent memory.
+Baatwise is exploring a multilingual conversation follow-through copilot for small education and admissions counseling teams in India. The product thesis is to prepare a counselor-reviewable case brief from confirmed, de-identified learner context and draft a follow-up in the learner’s preferred language.
+
+This repository contains an early evaluation build of that workflow. It is not a production service, and the initial customer segment remains a hypothesis. The build has no accounts, shared team workspace, persistent learner records, WhatsApp or CRM integrations, or send-message capability.
+
+## What the app does
+
+- Collects a learner goal, current stage, preferred reply language, confirmed constraints, next step, and de-identified conversation notes.
+- Sends those case fields to Anthropic’s Claude API after the counselor confirms permission to use the notes.
+- Produces a case brief with confirmed context, items to confirm, a suggested next step, and an editable follow-up draft.
+- Keeps the case reference local to the Streamlit session and does not include it in the Claude request.
+- Lets the counselor edit the result and download it as a text file. The app never sends a message to a learner.
+- Offers Claude Sonnet 5.5 by default and Claude Haiku 4.5 as the lower-cost option.
+
+Claude can make mistakes. The prompt tells it to use only supplied facts, separate missing details, and avoid making eligibility or admissions decisions. A counselor must verify every fact and decide what to use.
 
 ## Run locally
 
@@ -20,23 +33,14 @@ Alternatively, create `.streamlit/secrets.toml`:
 ANTHROPIC_API_KEY = "your-anthropic-api-key"
 ```
 
-The secrets file is ignored by Git. Do not commit API keys. Anthropic API usage is billed separately from Claude subscriptions or any startup credits.
+The secrets file should not be committed. Anthropic API usage is billed separately from Claude subscriptions or startup credits.
 
-## Included
+## Data handling and limitations
 
-- Claude Sonnet 5.5 by default, with Claude Haiku 4.5 as a lower-cost choice.
-- Session-only conversation history and a JSON transcript download.
-- Lexical retrieval of relevant earlier chat turns, plus recent turns.
-- Optional PDF text context (10 MB, 50 pages, and 18,000 extracted characters maximum). Scanned PDFs need OCR before upload.
-- Optional Anthropic web search, off by default. Web search can add separate search and token charges; Anthropic currently prices its search tool separately from model tokens.
-- English, Hindi, and Telugu reply preferences.
+The app stores form values and generated text in Streamlit session state only; it has no Baatwise database. The case reference is shown in the interface but is not sent to Anthropic. When the counselor generates a draft, the other case fields are sent to Anthropic’s API for processing. Anthropic handles those requests under its own policies and account settings.
 
-## Data and limitations
+Use de-identified, permissioned sample data for evaluation. Do not enter names, contact details, identity documents, financial or health information, or other sensitive data. This evaluation build does not provide authentication, durable storage, team access controls, retention controls, audit logs, or production safeguards. Review applicable service terms and privacy requirements before any real-world pilot.
 
-Chat and extracted PDF text remain in the Streamlit browser session and are sent to Anthropic when a prompt is submitted. They are not saved to a Baatwise database. Clearing the chat removes the session transcript. The PDF is held in session memory until removed or the session ends. Anthropic processes API requests under its own policies and account settings.
+## Product validation
 
-This prototype does not provide accounts, persistent storage, OCR, an independent search index, or production security controls. It is not evidence of incorporation, paying customers, production reliability, or validated results. Review the relevant service terms and privacy requirements before using real customer or sensitive data.
-
-## Configuration
-
-Set `ANTHROPIC_API_KEY` in the environment or Streamlit secrets. The app does not need MongoDB, Google Search credentials, or a Gemini key.
+The first segment to investigate is small education and admissions counseling teams in India. Customer demand, workflow fit, integrations, pricing, and time saved have not been validated. Next steps are counselor interviews, testing one repeat follow-up workflow, and evaluating correctness and ease of correction before making outcome claims.
