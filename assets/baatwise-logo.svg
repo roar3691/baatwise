@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 190" role="img" aria-labelledby="title desc">
+  <title id="title">Baatwise — Keep the thread moving</title>
+  <desc id="desc">Baatwise wordmark with a double conversation mark connected by a bright thread.</desc>
+  <defs><g id="mark">
+    <rect width="160" height="160" rx="36" fill="#d9fa55"/>
+    <path d="M26 34c0-9 7-16 16-16h76c9 0 16 7 16 16v37c0 9-7 16-16 16h-13l-22 18V87H42c-9 0-16-7-16-16V34Z" fill="#10121b" stroke="#9285ff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M47 47h66M47 63h40" stroke="#f0efe8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M60 86H42c-9 0-16 7-16 16v16c0 9 7 16 16 16h41l18 14v-14h35c9 0 16-7 16-16v-9" fill="#d9fa55" stroke="#10121b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M47 106h42M47 120h25" stroke="#10121b" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="136" cy="112" r="8" fill="#ff795e"/>
+  </g></defs>
+  <use href="#mark" x="8" y="15"/>
+  <text x="196" y="104" fill="#f0efe8" font-family="'Space Grotesk',Arial,sans-serif" font-size="79" font-weight="700" letter-spacing="-5">BAATWISE</text>
+  <text x="200" y="145" fill="#a7a9b6" font-family="'IBM Plex Mono',monospace" font-size="20" font-weight="500" letter-spacing="2">KEEP THE THREAD MOVING</text>
+</svg>

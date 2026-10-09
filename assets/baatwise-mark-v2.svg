@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Baatwise conversation-thread mark</title>
+  <desc id="desc">Two connected conversation shapes with a bright thread linking what was said to what comes next.</desc>
+  <rect width="512" height="512" rx="112" fill="#d9fa55"/>
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+  <path d="M111 135c0-22 18-40 40-40h210c22 0 40 18 40 40v102c0 22-18 40-40 40h-37l-61 51v-51H151c-22 0-40-18-40-40V135Z" fill="#10121b" stroke="#9285ff" stroke-width="15" stroke-linejoin="round"/>
+  <path d="M166 172h187M166 217h111" stroke="#f0efe8" stroke-width="15" stroke-linecap="round"/>
+  <path d="M196 282h-45c-22 0-40 18-40 40v45c0 22 18 40 40 40h113l49 42v-42h96c22 0 40-18 40-40v-25" fill="#d9fa55" stroke="#10121b" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M164 337h104M164 372h61" stroke="#10121b" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="406" cy="337" r="19" fill="#ff795e" stroke="#10121b" stroke-width="8"/>
+  <circle cx="380" cy="264" r="9" fill="#d9fa55"/>
+</svg>

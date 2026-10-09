@@ -1,5 +1,9 @@
 # Baatwise
 
+![Baatwise conversation-thread mark](assets/baatwise-mark.png)
+
+**Keep the thread moving.**
+
 Baatwise is exploring a multilingual conversation follow-through copilot for small education and admissions counseling teams in India. The product thesis is to prepare a counselor-reviewable case brief from confirmed, de-identified learner context and draft a follow-up in the learner’s preferred language.
 
 This repository contains an early evaluation build of that workflow. It is not a production service, and the initial customer segment remains a hypothesis. The build has no accounts, shared team workspace, persistent learner records, WhatsApp or CRM integrations, or send-message capability.

@@ -25,7 +25,7 @@ The counselor is responsible for checking the facts and deciding whether to use 
 
 st.set_page_config(
     page_title="Baatwise · counselor follow-through",
-    page_icon="💬",
+    page_icon="assets/baatwise-mark.png",
     layout="wide",
 )
 
@@ -93,8 +93,10 @@ def create_follow_up_draft(client: Anthropic, model: str, case_context: str) -> 
 
 
 def main() -> None:
-    st.title("Baatwise")
-    st.subheader("Keep the context. Move the work.")
+    logo, title = st.columns([0.12, 0.88], vertical_alignment="center")
+    logo.image("assets/baatwise-mark.png", width=64)
+    title.title("Baatwise")
+    st.subheader("Keep the thread moving.")
     st.write(
         "Prepare a reviewable case brief and follow-up draft for a learner conversation. "
         "You check and edit every detail before deciding what to do next."
